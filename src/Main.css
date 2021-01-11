@@ -1,0 +1,38 @@
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes scan {
+    0% {
+        background-position: 0 -100vh;
+    }
+
+    35%,
+    100% {
+        background-position: 0 100vh;
+    }
+}
+
+output q {
+    border-right: 0 solid #14fdce;
+    animation: blink 500ms linear 0s infinite;
+    text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+    margin-bottom: 1em;
+    line-height: 150%;
+}
+
+output q::before {
+    content: "> ";
+}
+
+output q:last-child {
+    border-right-width: 1ch;
+}
