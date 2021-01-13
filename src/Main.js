@@ -5,6 +5,7 @@ import {
   Switch,
 } from "react-router-dom";
 import "./Main.css";
+import AdminManager from "./Game/AdminManager";
 
 class Main extends Component {
   constructor(props) {
@@ -37,7 +38,9 @@ class Main extends Component {
                     <Route exact path="/" />
                   </Switch>
                   <Switch>
-                    <Route path="/admin" />
+                    <Route path="/admin">
+                      <AdminManager />
+                    </Route>
                   </Switch>
                 </BrowserRouter>
               </div>

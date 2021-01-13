@@ -1,0 +1,20 @@
+#adminManagerMain {
+    pointer-events: all;
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%;
+    margin-left: 1rem;
+}
+
+#adminManagerMain::-webkit-scrollbar {
+    display: none;
+}
+
+#adminManagerMain {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

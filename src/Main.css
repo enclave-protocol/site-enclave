@@ -1,3 +1,44 @@
+p:not(.menu p) {
+    text-align: justify;
+    text-shadow: 0 0 1ex #3f3, 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.main a:not(.active) {
+    border-bottom: none;
+}
+
+.main a.active {
+    border-bottom: none;
+}
+
+.main a:hover {
+    border-bottom: none;
+}
+
+.header-image-with-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title {
+    width: 100%;
+    margin-left: 2.5vw;
+}
+
+.header-image-with-title h1,
+.header-title h1 {
+    margin-bottom: 0;
+}
+
+.header-image-with-title img {
+    min-width: 20vw;
+}
+
+.header-content {
+    text-align: justify;
+}
+
 @keyframes blink {
     50% {
         opacity: 0;
@@ -34,5 +75,10 @@ output q::before {
 }
 
 output q:last-child {
+    border-right-width: 1ch;
+}
+
+input {
+    border-right: 0 solid #14fdce;
     border-right-width: 1ch;
 }
