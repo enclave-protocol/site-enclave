@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import "./AdminManager.css";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Console from "../Components/Console";
+import Asteroids from "./Asteroids";
 
 class AdminManager extends Component {
   constructor(props) {
@@ -24,8 +26,12 @@ class AdminManager extends Component {
         <div id="adminManagerMain" className="overflow-x-hidden-desktop">
           <BrowserRouter>
             <Switch>
-              <Route exact path="/admin" />
-              <Route path="/admin/game" />
+              <Route exact path="/admin">
+                <Console/>
+              </Route>
+              <Route path="/admin/game">
+                <Asteroids/>
+              </Route>
             </Switch>
           </BrowserRouter>
         </div>

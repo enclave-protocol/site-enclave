@@ -1,0 +1,66 @@
+:root {
+    --padding-game-overlay: 1.5rem;
+}
+
+.b-panel {
+    padding: var(--padding-game-overlay);
+    display: flex;
+}
+
+.b-panel_right {
+    margin-left: auto;
+}
+
+#g-game {
+    font: normal 16px/16px "Consolas", monospace;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    height: calc(90vh - 48px);
+    min-width: 320px;
+    min-height: 240px;
+}
+
+.b-msgbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: var(--padding-game-overlay);
+    display: none;
+}
+
+.b-scores {
+    list-style: decimal outside;
+    padding-left: 32px;
+}
+
+.b-scores__input {
+    padding: 4px;
+    outline: 0;
+}
+
+.b-button {
+    padding: 8px;
+    margin: 16px 0;
+    outline: 0;
+}
+
+.b-button:hover,
+.b-button:focus {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.game-audio-controls {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: var(--padding-game-overlay);
+}
+
+.music-control {
+    margin-left: auto;
+}

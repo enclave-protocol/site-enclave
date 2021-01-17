@@ -1,0 +1,63 @@
+.animate__animated.animate__fadeIn {
+    --animate-duration: 3s;
+}
+
+.console-main {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 1rem;
+}
+
+.console-main::-webkit-scrollbar {
+    display: none;
+}
+
+.console-main {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.console {
+    display: flex;
+}
+
+.console-input {
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    caret-color: transparent;
+    color: var(--main-color);
+}
+
+.console-input:focus {
+    outline: none;
+}
+
+.console-main form {
+    height: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.console-main form * {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.terminal-prefix {
+    color: white;
+}
+
+.client-prefix {
+    color: #14fdce;
+}
+
+.ascii-text {
+    min-height: 1.75rem !important;
+}

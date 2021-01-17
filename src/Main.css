@@ -82,3 +82,7 @@ input {
     border-right: 0 solid #14fdce;
     border-right-width: 1ch;
 }
+
+#caret {
+    animation: blink 500ms linear 0s infinite;
+}
