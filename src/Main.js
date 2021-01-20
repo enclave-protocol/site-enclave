@@ -6,20 +6,39 @@ import {
 } from "react-router-dom";
 import "./Main.css";
 import AdminManager from "./Game/AdminManager";
+import Welcome from "./Components/Welcome";
 
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.welcomeStatus = this.welcomeStatus.bind(this);
+    this.state = {
+      enter: this.props.enter,
+      welcomeStatus: true
+    };
   }
 
   componentWillUnmount() {
   }
 
   componentDidMount() {
+    const welcomeEnter = document.getElementById("welcomeEnter");
+
+    if (welcomeEnter) {
+      welcomeEnter.addEventListener("click", () => {
+        this.setState({enter: true});
+      });
+    }
   }
 
   componentDidUpdate() {
+  }
+
+  welcomeStatus(status) {
+    if (status) {
+      this.setState({welcomeStatus: status});
+    }
+    return this.state.welcomeStatus;
   }
 
   render() {
@@ -35,7 +54,12 @@ class Main extends Component {
                     <Route path={["/main", "/doctrine", "/token"]} />
                   </Switch>
                   <Switch>
-                    <Route exact path="/" />
+                    <Route exact path="/">
+                      <Welcome
+                          enter={this.state.enter}
+                          welcomeStatus={this.welcomeStatus}
+                      />
+                    </Route>
                   </Switch>
                   <Switch>
                     <Route path="/admin">
