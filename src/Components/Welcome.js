@@ -7,6 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import AdminManager from "../Game/AdminManager";
+import Content from "../Content";
 
 class Welcome extends Component {
   constructor(props) {
@@ -83,7 +84,7 @@ class Welcome extends Component {
             </Switch>
             <Switch>
               <Route path="/main">
-                <div>Main</div>
+                <Content enter={true}/>
               </Route>
             </Switch>
           </BrowserRouter>

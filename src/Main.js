@@ -7,6 +7,7 @@ import {
 import "./Main.css";
 import AdminManager from "./Game/AdminManager";
 import Welcome from "./Components/Welcome";
+import Content from "./Content";
 
 class Main extends Component {
   constructor(props) {
@@ -51,7 +52,12 @@ class Main extends Component {
               <div className="piece output">
                 <BrowserRouter>
                   <Switch>
-                    <Route path={["/main", "/doctrine", "/token"]} />
+                    <Route path={["/main", "/doctrine", "/token"]}>
+                      <Content
+                          enter={true}
+                          welcomeStatus={this.welcomeStatus}
+                      />
+                    </Route>
                   </Switch>
                   <Switch>
                     <Route exact path="/">
