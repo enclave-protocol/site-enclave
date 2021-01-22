@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./Main.css";
+import Footer from "./Components/Footer";
 import "./Content.css";
 
 class Content extends Component {
@@ -26,6 +27,7 @@ class Content extends Component {
                 <div className="content" id="consoleHistory"/>
               </div>
             </div>
+            <Footer/>
           </div>
       );
     } else {

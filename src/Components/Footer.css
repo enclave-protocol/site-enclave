@@ -1,0 +1,30 @@
+footer {
+    position: fixed;
+    height: 2rem;
+    bottom: 3.65vh;
+    left: 3.7rem;
+    right: 3.7rem;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1.75rem;
+    z-index: 1;
+    background-color: var(--main-color);
+    box-shadow: -1px 14px 5px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 14px 5px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 14px 5px -1px rgba(0, 0, 0, 0.75);
+
+}
+
+footer .social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer .music-main {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
