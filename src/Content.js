@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import "./Main.css";
 import Footer from "./Components/Footer";
 import "./Content.css";
+import Menu from "./Components/Menu";
 
 class Content extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class Content extends Component {
               id="contentMain"
           >
             <div className="output-content">
+              <Menu welcomeStatus={this.props.welcomeStatus}/>
               <div className="content" id="contentArea">
                 <div className="content" id="consoleHistory"/>
               </div>

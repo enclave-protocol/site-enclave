@@ -1,0 +1,113 @@
+:root {
+    --border-size: 5px;
+    --menu-links-default-color: #3CF800;
+    --menu-links-active-color: #14fdce;
+}
+
+#menuMain .animate__animated.animate__fadeIn,
+#menuMain .animate__animated.animate__fadeOut {
+    --animate-duration: 1s;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu .link {
+    border-top: var(--border-size) solid var(--main-color);
+    border-right: var(--border-size) solid var(--main-color);
+    padding-right: 1rem;
+    padding-top: .25rem;
+    padding-left: 2rem;
+    font-size: 2vw;
+    width: 10vw;
+    display: block;
+    text-align: center;
+    color: var(--menu-links-default-color);
+}
+
+#menu .menu-wrapper {
+    margin-right: .25rem;
+}
+
+#menu a:active,
+#menu a:focus,
+#menu a:hover {
+    background-color: unset;
+    color: var(--menu-links-active-color);
+}
+
+#menu-placeholder {
+    border-right: none !important;
+    border-left: var(--border-size) solid var(--main-color);
+    cursor: default;
+    padding-left: 1.25rem !important;
+}
+
+#menu-arrow {
+    margin-top: var(--border-size);
+    border-top: none !important;
+    border-right: none !important;
+    width: unset !important;
+    pointer-events: none;
+}
+
+.menu-hamburger {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin-left: auto;
+}
+
+#menuMobile {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menuHamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -1.5rem;
+    padding-top: 1.5rem;
+}
+
+#menuHamburgerBackground {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+#menuHamburger a.link {
+    border: 3px solid #62BC78;
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem !important;
+    cursor: pointer;
+}
+
+#menuHamburger a.link.active {
+    color: black;
+    background-color: #008900;
+    border: none;
+    padding: 3px;
+}
+
+.menu-hamburger-close {
+    margin-right: 10%;
+    margin-bottom: 1rem;
+}
+
+#menuMain {
+    padding: 1.5rem 2rem;
+}
