@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Menu.css';
 import {BrowserRouter, Route, Switch, Link, NavLink} from "react-router-dom";
+import Default from '../Pages/Default';
 
 class Menu extends Component {
     constructor(props) {
@@ -104,12 +105,12 @@ class Menu extends Component {
                 <div className="my-4 text-uppercase" id="currentlyOnPage">*** <span className="d-none-max-768">You are currently on page: </span> <span>{ this.state.currentPageIndex }</span> ***</div>
                 <Switch>
                     <Route exact path="/">
-                        <div>Main</div>
+                        <Default/>
                     </Route>
                 </Switch>
                 <Switch>
                     <Route path="/main">
-                        <div>Main</div>
+                        <Default/>
                     </Route>
                 </Switch>
                 <Switch>

@@ -1,0 +1,36 @@
+#logoWithSounds {
+    cursor: pointer;
+}
+
+.ascii-main {
+    font-size: .9vw;
+}
+
+.ascii-line {
+    display: block;
+}
+
+.main-description p {
+    margin: 2vh 0.25rem;
+}
+
+.header-image-with-title {
+    height: 30vh;
+    margin: 2rem 0 1.5rem !important;
+}
+
+.header-logo {
+    height: 25vh;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    max-height: 30vh;
+}
+
+.header-image-with-title .glitch {
+    display: flex;
+}
