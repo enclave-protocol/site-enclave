@@ -21,6 +21,12 @@ p:not(.menu p) {
     justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+    .header-image-with-title {
+        flex-wrap: wrap;
+    }
+}
+
 .header-title {
     width: 100%;
     margin-left: 2.5vw;
@@ -37,6 +43,28 @@ p:not(.menu p) {
 
 .header-content {
     text-align: justify;
+}
+
+@media screen and (min-width: 851px) {
+    header .header-image-with-title img {
+    }
+}
+
+@media screen and (max-width: 850px) {
+    header {
+        text-align: center;
+    }
+
+    .header-logo {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block;
+        width: 50%;
+    }
+
+    .header-image-with-title img {
+        width: 100%;
+    }
 }
 
 @keyframes blink {

@@ -275,6 +275,13 @@ a:hover {
     left: 1%;
     width: 98%;
     pointer-events: none;
+    backface-visibility: hidden;
+}
+
+@media screen and (max-width: 1279px) {
+    .frame {
+        box-shadow: inset 0 0 15rem black, inset 0 0 0.5rem black, 0 0 10rem black;
+    }
 }
 
 .frame::before {
@@ -305,8 +312,11 @@ a:hover {
     -webkit-animation: crt-output 10ms infinite;
     animation: crt-output 10ms infinite;
     background-image: radial-gradient(#11581e, #041607);
+    background-image: radial-gradient(rgba(17, 88, 30, 1), rgba(4, 22, 7, 1));
     background-repeat: no-repeat;
     background-size: cover;
+    -moz-background-image: radial-gradient(#11581e, #041607);
+    -webkit-background-image: radial-gradient(#11581e, #041607);
     overflow: auto;
     position: absolute;
     padding: 0 1.25rem;
@@ -315,6 +325,7 @@ a:hover {
     z-index: -1;
     border-radius: var(--tv-border-radius);
     text-shadow: 0 0 1px rgba(51, 255, 51, 0.4), 0 0 2px rgba(255, 255, 255, 0.6);
+    backface-visibility: hidden;
 }
 
 .noise {
@@ -327,6 +338,7 @@ a:hover {
     background-size: cover;
     z-index: 0;
     opacity: 0.015;
+    backface-visibility: hidden;
 }
 
 @media screen and (max-width: 1280px) {

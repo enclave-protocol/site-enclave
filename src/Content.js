@@ -7,13 +7,6 @@ import Menu from "./Components/Menu";
 class Content extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
-  }
-
-  componentWillUnmount() {
-  }
-
-  componentDidMount() {
   }
 
   render() {

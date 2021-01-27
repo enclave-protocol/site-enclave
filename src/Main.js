@@ -19,22 +19,6 @@ class Main extends Component {
     };
   }
 
-  componentWillUnmount() {
-  }
-
-  componentDidMount() {
-    const welcomeEnter = document.getElementById("welcomeEnter");
-
-    if (welcomeEnter) {
-      welcomeEnter.addEventListener("click", () => {
-        this.setState({enter: true});
-      });
-    }
-  }
-
-  componentDidUpdate() {
-  }
-
   welcomeStatus(status) {
     if (status) {
       this.setState({welcomeStatus: status});
@@ -45,38 +29,38 @@ class Main extends Component {
   render() {
     return (
         <div className="main">
-          <div className="">
-            <div className="frame">
-              <div className="noise"/>
-              <div className="scan"/>
-              <div className="piece output">
-                <BrowserRouter>
-                  <Switch>
-                    <Route path={["/main", "/doctrine", "/token"]}>
-                      <Content
-                          enter={true}
-                          welcomeStatus={this.welcomeStatus}
-                      />
-                    </Route>
-                  </Switch>
-                  <Switch>
-                    <Route exact path="/">
-                      <Welcome
-                          enter={this.state.enter}
-                          welcomeStatus={this.welcomeStatus}
-                      />
-                    </Route>
-                  </Switch>
-                  <Switch>
-                    <Route path="/admin">
-                      <AdminManager />
-                    </Route>
-                  </Switch>
-                </BrowserRouter>
-              </div>
-              <div className="piece scanlines noclick"/>
-              <div className="piece glow noclick"/>
+          <div className="frame">
+            <div className="noise"/>
+            <div className="scan"/>
+            <div className="piece output">
+              <BrowserRouter>
+                <Switch>
+                  <Route path={["/main", "/doctrine", "/token"]}>
+                    <Content
+                        enter={true}
+                        welcomeStatus={this.welcomeStatus}
+                    />
+                  </Route>
+                </Switch>
+                <Switch>
+                  <Route exact path="/">
+                    <Welcome
+                        enter={this.state.enter}
+                        welcomeStatus={this.welcomeStatus}
+                    />
+                  </Route>
+                </Switch>
+                <Switch>
+                  <Route path="/admin">
+                    <AdminManager/>
+                  </Route>
+                </Switch>
+                <Switch>
+                </Switch>
+              </BrowserRouter>
             </div>
+            <div className="piece scanlines noclick"/>
+            <div className="piece glow noclick"/>
           </div>
         </div>
     );
