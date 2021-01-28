@@ -583,18 +583,6 @@ class Console extends Component {
   render() {
       return (
         <div className="console-main">
-        <div className="mobile-restrict-overlay">
-          <div className="mobile-restrict-description text-uppercase text-center">
-            <p>Vacuum tubes not found!</p>
-            <p>Please use a Vacuum tube BASED computer at your base!</p>
-            <a className="button" href="/">Return</a>
-          </div>
-          <img
-          src={process.env.PUBLIC_URL + "/img/console-mobile.svg"}
-          alt="Mobile Restricted"
-          className="mobile-restricted-image"
-          />
-        </div>
         <div id="consoleContent" className="d-none-max-768">
           <div className="content" id="contentArea">
             <div className="content" id="consoleHistory"/>

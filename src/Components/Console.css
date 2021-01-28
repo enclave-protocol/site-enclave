@@ -13,6 +13,24 @@
     padding-top: 1rem;
 }
 
+.mobile-restrict-overlay {
+    position: absolute;
+    z-index: 9999;
+}
+
+.mobile-restrict-overlay img {
+    width: 100%;
+    fill: var(--main-color);
+}
+
+.mobile-restrict-description {
+    border: 4px solid var(--main-color);
+}
+
+.mobile-restricted-image {
+    margin-top: 4vh;
+}
+
 .console-main::-webkit-scrollbar {
     display: none;
 }
@@ -60,4 +78,47 @@
 
 .ascii-text {
     min-height: 1.75rem !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .console-main {
+        font-size: 2.25vw;
+    }
+
+    .ascii-text {
+        line-height: 2.25vw !important;
+        font-size: 2.25vw !important;
+    }
+
+    .mobile-restrict-description {
+        padding: 1rem;
+    }
+
+    .mobile-restrict-description a {
+        font-size: 2.5rem;
+        margin-bottom: .5rem;
+    }
+
+    .mobile-restrict-description p {
+        margin-top: .5rem !important;
+        margin-bottom: .5rem !important;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    #adminManagerMain {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    #adminManagerMain {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+    .console-main {
+        font-size: 2.25rem;
+    }
 }
