@@ -6,13 +6,6 @@ import Music from './Music';
 class Footer extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
-  }
-
-  componentWillUnmount() {
-  }
-
-  componentDidMount() {
   }
 
   render() {

@@ -12,6 +12,7 @@
 #menu {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #menu .link {
@@ -110,4 +111,16 @@
 
 #menuMain {
     padding: 1.5rem 2rem;
+}
+
+@media screen and (max-width: 1280px) {
+    #menuMain {
+        padding: .5rem .25rem;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    #currentlyOnPage {
+        font-size: 1.35vw;
+    }
 }

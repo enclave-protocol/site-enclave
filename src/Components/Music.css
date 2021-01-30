@@ -18,3 +18,10 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+
+@media screen and (min-width: 2000px) {
+    .music-control, .music-control-pause {
+        height: 1.2vw;
+        width: 1.2vw;
+    }
+}

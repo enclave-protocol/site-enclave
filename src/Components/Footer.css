@@ -17,6 +17,12 @@ footer {
 
 }
 
+@media screen and (max-width: 768px) {
+    footer {
+        margin: unset;
+    }
+}
+
 footer .social {
     width: 100%;
     display: flex;
@@ -27,4 +33,120 @@ footer .music-main {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+}
+
+@media screen and (max-width: 1800px) {
+    footer {
+        left: 3.2vw;
+        right: 3.2vw;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    footer {
+        left: 3.45vw;
+        right: 3.45vw;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    footer {
+        left: 3.9vw;
+        right: 3.9vw;
+    }
+}
+
+
+@media screen and (max-width: 1280px) {
+    footer {
+        padding: 0 1rem;
+        left: .6rem;
+        right: .6rem;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    footer {
+        padding: 0 1rem;
+        left: .4rem;
+        right: .4rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    footer {
+        padding: 0 1rem;
+        left: .25rem;
+        right: .25rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    footer {
+        left: 3.75vw;
+        right: 3.75vw;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    footer {
+        left: 3.9vw;
+        right: 3.9vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        left: 6vw;
+        right: 6vw;
+    }
+}
+
+@media screen and (max-height: 850px) {
+    footer {
+        bottom: 3.9vh;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    footer {
+        bottom: 4.25vh;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    footer {
+        bottom: 4.6vh;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    footer {
+        bottom: 4.75vh;
+    }
+}
+
+@media screen and (min-height: 1050px) {
+    footer {
+        bottom: 3.5vh;
+    }
+}
+
+@media screen and (min-height: 1440px) {
+    footer {
+        bottom: 3.1vh;
+    }
+}
+
+@media screen and (min-height: 2100px) {
+    footer {
+        bottom: 2.8vh;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    footer {
+        height: 1.5vw;
+    }
 }

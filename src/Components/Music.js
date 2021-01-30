@@ -5,38 +5,22 @@ import "./Music.css";
 class Music extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
     this.audio = null;
+    this.musicHandler = this.musicHandler.bind(this)
   }
 
-  componentWillUnmount() {
-  }
-
-  componentDidMount() {
-    const play = document.getElementById("musicControlPlay");
-    const pause = document.getElementById("musicControlPause");
-    const enter = document.getElementById("welcomeEnter");
-    if (enter) {
-      enter.addEventListener("click", () => {
-        musicToggler(this, true);
-      });
-    }
-    if (play && pause) {
-      play.addEventListener("click", () => {
-        musicToggler(this, true);
-      });
-      pause.addEventListener("click", () => {
-        musicToggler(this, false);
-      });
-    }
-
-    function musicToggler(context, status) {
-      pause.classList.toggle("d-none");
-      play.classList.toggle("d-none");
-      status
-          ? context.audio.audioEl.current.play()
-          : context.audio.audioEl.current.pause();
-    }
+  musicHandler(e) {
+      if (e.target.id === 'musicControlPause') {
+          const play = document.getElementById("musicControlPlay")
+          play.classList.toggle("d-none")
+          e.target.classList.toggle("d-none")
+          this.audio.audioEl.current.pause()
+      } else if (e.target.id === 'musicControlPlay') {
+          const pause = document.getElementById("musicControlPause")
+          pause.classList.toggle("d-none")
+          e.target.classList.toggle("d-none")
+          this.audio.audioEl.current.play()
+      }
   }
 
   render() {
@@ -60,6 +44,7 @@ class Music extends Component {
                 className="music-control music-control-play d-none"
                 id="musicControlPlay"
                 data-tip="We recommend<br>to enable <br>this."
+                onClick={this.musicHandler}
             />
             <img
                 src={
@@ -72,6 +57,7 @@ class Music extends Component {
                 className="music-control music-control-pause"
                 id="musicControlPause"
                 data-tip="Click to<br> stop<br>the music."
+                onClick={this.musicHandler}
             />
           </div>
           <ReactAudioPlayer
