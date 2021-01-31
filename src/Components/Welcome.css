@@ -83,3 +83,65 @@
     color: var(--main-color) !important;
     text-shadow: 0 0 1ex var(--main-color), 0 0 2px rgba(255, 255, 255, 0.8);
 }
+
+@media screen and (min-width: 2200px) {
+    .welcome-button {
+        font-size: 3rem;
+    }
+
+    .welcome-logo {
+        width: 20vw;
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    .welcome-button {
+        font-size: 3rem;
+    }
+
+    .welcome-logo {
+        width: 18vw;
+    }
+}
+
+@media screen and (min-width: 3500px) {
+    .welcome-button {
+        font-size: 4rem;
+    }
+
+    .welcome-logo {
+        width: 20vw;
+        margin-bottom: 8rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .welcome-buttons {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .welcome-button {
+        width: unset;
+        margin-bottom: 1rem;
+    }
+
+    .welcome-button:last-of-type {
+        border-bottom: var(--border-size) solid green !important;
+        border-top: none;
+        border-right: var(--border-size) solid green;
+        padding-right: var(--border-size);
+    }
+
+    .welcome-logo {
+        width: 60vw;
+    }
+
+    .welcome-footer-image {
+        object-fit: none;
+        margin-bottom: 1rem;
+        height: 50px;
+    }
+}

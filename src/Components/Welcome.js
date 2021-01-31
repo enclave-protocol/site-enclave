@@ -16,13 +16,6 @@ class Welcome extends Component {
     this.audioJSON = {
       "radiation": new Audio(process.env.PUBLIC_URL + "/sounds/radiation.mp3")
     };
-    this.state = {};
-  }
-
-  componentWillUnmount() {
-  }
-
-  componentDidMount() {
   }
 
   playAudio() {

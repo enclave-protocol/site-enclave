@@ -1,19 +1,12 @@
 import React, {Component} from "react";
 import "./AdminManager.css";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import Console from "../Components/Console";
-import Asteroids from "./Asteroids";
+import Login from "./Login";
 
 class AdminManager extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
-  }
-
-  componentWillUnmount() {
-  }
-
-  componentDidMount() {
   }
 
   setStatus(status) {
@@ -27,11 +20,14 @@ class AdminManager extends Component {
           <BrowserRouter>
             <Switch>
               <Route exact path="/admin">
+                <Login/>
+              </Route>
+              <Route path="/admin/console">
                 <Console/>
               </Route>
-              <Route path="/admin/game">
-                <Asteroids/>
-              </Route>
+            </Switch>
+            <Switch>
+              <Redirect to='/admin'/>
             </Switch>
           </BrowserRouter>
         </div>
