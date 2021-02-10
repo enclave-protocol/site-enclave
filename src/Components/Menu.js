@@ -3,6 +3,7 @@ import './Menu.css';
 import {BrowserRouter, Route, Switch, NavLink} from "react-router-dom";
 import Default from '../Pages/Default';
 import Token from "../Pages/Token";
+import Whitepaper from "../Pages/Whitepaper";
 
 class Menu extends Component {
     constructor(props) {
@@ -85,7 +86,7 @@ class Menu extends Component {
                 </Switch>
                 <Switch>
                     <Route path="/doctrine">
-                        <div>Doctrine</div>
+                        <Whitepaper/>
                     </Route>
                 </Switch>
                 <Switch>
