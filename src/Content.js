@@ -17,7 +17,7 @@ class Content extends Component {
               id="contentMain"
           >
             <div className="output-content">
-              <Menu welcomeStatus={this.props.welcomeStatus}/>
+              <Menu />
               <div className="content" id="contentArea">
                 <div className="content" id="consoleHistory"/>
               </div>

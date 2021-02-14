@@ -12,18 +12,9 @@ import Content from "./Content";
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.welcomeStatus = this.welcomeStatus.bind(this);
     this.state = {
-      enter: this.props.enter,
-      welcomeStatus: true
+      enter: this.props.enter
     };
-  }
-
-  welcomeStatus(status) {
-    if (status) {
-      this.setState({welcomeStatus: status});
-    }
-    return this.state.welcomeStatus;
   }
 
   render() {
@@ -36,18 +27,13 @@ class Main extends Component {
               <BrowserRouter>
                 <Switch>
                   <Route path={["/main", "/doctrine", "/token"]}>
-                    <Content
-                        enter={true}
-                        welcomeStatus={this.welcomeStatus}
-                    />
+                    <Content enter={true} />
                   </Route>
                 </Switch>
                 <Switch>
                   <Route exact path="/">
                     <Welcome
-                        enter={this.state.enter}
-                        welcomeStatus={this.welcomeStatus}
-                    />
+                        enter={this.state.enter} />
                   </Route>
                 </Switch>
                 <Switch>
