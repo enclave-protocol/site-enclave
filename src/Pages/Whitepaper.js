@@ -218,9 +218,10 @@ class Whitepaper extends Component {
     if (offsetWidth > 1118) {
       menu.style.height = ''
       table.style.height = ''
+      table.style.marginBottom = ''
       const innerHeight = document.getElementById('what is').offsetHeight
-      menu.style.height = innerHeight * 1.6 + 'px'
-      table.style.height = innerHeight * 1.6 + 'px'
+      menu.style.height = innerHeight * 1.62 + 'px'
+      table.style.height = innerHeight * 1.62 + 'px'
       if (offsetWidth > 3000 && document.body.offsetHeight < 2000) {
         menu.style.height = innerHeight * 1.75 + 'px'
         table.style.height = innerHeight * 1.75 + 'px'
@@ -228,9 +229,15 @@ class Whitepaper extends Component {
     } else if (793 < offsetWidth < 1118) {
       menu.style.height = ''
       table.style.height = ''
+      table.style.marginBottom = ''
+      if (offsetWidth < 793) {
+        table.style.marginBottom = 20 + 'px'
+        return
+      }
       const innerHeight = table.offsetHeight
       menu.style.height = innerHeight * 1.3 + 'px'
       table.style.height = innerHeight * 1.3 + 'px'
+      table.style.marginBottom = 20 + 'px'
     }
   }
 

@@ -1,8 +1,8 @@
 .whitepaper__wrapper-new {
     display: flex;
-    padding: 4vh 0;
+    padding: 1vh 0 0;
     font-size: 36px;
-    margin: 0 auto 4vh !important;
+    margin: 0 auto 1rem !important;
 }
 
 .active-menu {
@@ -198,7 +198,6 @@ button {
     }
 }
 
-
 @media screen and (max-width: 770px) {
     .info {
         margin: 0;
@@ -217,8 +216,8 @@ button {
     }
 
     #canvas {
-        width: 550px !important;
-        height: 550px !important;
+        width: 750px !important;
+        height: 750px !important;
     }
 
     .middle {
@@ -271,6 +270,12 @@ button {
 
     button {
         font-size: 1.8vw !important;
+    }
+}
+
+@media screen and (max-width: 2580px) and (min-width: 2530px) and (max-height: 1090px) and (min-height: 1050px) {
+    .whitepaper__wrapper-new {
+        font-size: 1.6vw !important;
     }
 }
 
